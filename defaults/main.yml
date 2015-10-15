@@ -1,0 +1,7 @@
+---
+### Base packages
+python_base_pkg: python
+
+### Extra packages
+python_extra_pkg: true
+python_pip_pkg: python-pip

@@ -1,0 +1,17 @@
+---
+- name: Install base package Arch Linux
+  sudo: yes
+  pacman:
+    name: "{{ python_base_pkg }}"
+    state: present
+    update_cache: yes
+  when: ansible_os_family == "Archlinux"
+
+- name: Install extra package Arch Linux
+  sudo: yes
+  pacman:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ python_pip_pkg }}"
+  when: python_extra_pkg == true and ansible_os_family == "Archlinux"

@@ -1,0 +1,12 @@
+---
+### Archlinux
+- name: Install Python Arch Linux
+  include: archlinux/install_python.yml
+
+### Debian
+- name: Install Python Debian/Ubuntu
+  include: debian/install_python.yml
+
+### Redhat
+- name: Install Python CentOS/Fedora/SuSe
+  include: redhat/install_python.yml
